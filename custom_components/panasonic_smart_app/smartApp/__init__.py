@@ -180,9 +180,10 @@ class SmartApp(object):
                 try:
                     info = await self.get_device_info(device.get("Auth"), gwid, status_codes)
                     device["status"].update(info)
+                    _LOGGER.info(f"device info: {device}")
                 except PanasonicExceedRateLimit:
                     _LOGGER.warning(
-                        "超量使用 API，功能將受限制，詳見 https://github.com/osk2/panasonic_smart_app/discussions/31"
+                        "Exceed rate limit of API, functions would be limited,please refer to https://github.com/osk2/panasonic_smart_app/discussions/31"
                     )
                     overview = await get_device_overview(gwid)
                     target_device = list(
@@ -297,10 +298,10 @@ class SmartApp(object):
                         filter(lambda device: device["Auth"] == auth, self._devices)
                     )
                     raise PanasonicDeviceOffline(
-                        f"無法連線至\"{device[0]['NickName']}\"，將於下輪更新時重試"
+                        f"Cannot connect to \"{device[0]['NickName']}\", will retry in next schedule."
                     )
                 else:
-                    raise PanasonicDeviceOffline(f"無法連線至裝置，將於下輪更新時重試")
+                    raise PanasonicDeviceOffline(f"Cannot connect to, will retry in next schedule.")
 
             elif resp.get("StateMsg") == EXCEPTION_INVALID_REFRESH_TOKEN:
                 raise PanasonicTokenExpired
