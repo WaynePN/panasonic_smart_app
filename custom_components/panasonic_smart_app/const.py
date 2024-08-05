@@ -104,9 +104,9 @@ CLIMATE_AVAILABLE_MODE = [
     {"key": HVACMode.AUTO, "mappingCode": 3},
     {"key": HVACMode.HEAT, "mappingCode": 4},
 ]
-CLIMATE_AVAILABLE_PRESET = {0: "冷氣", 1: "除濕", 2: "清淨", 3: "自動", 4: "暖氣"}
+CLIMATE_AVAILABLE_PRESET = {0: "冷氣", 1: "Dehumidifier", 2: "清淨", 3: "自動", 4: "暖氣"}
 CLIMATE_AVAILABLE_SWING_MODE = {
-    0: "自動",
+    0: "Auto",
     1: "0°",
     2: "20°",
     3: "45°",
@@ -114,7 +114,7 @@ CLIMATE_AVAILABLE_SWING_MODE = {
     5: "90°",
 }
 CLIMATE_AVAILABLE_FAN_MODE = {
-    0: "自動",
+    0: "Auto",
     1: "20%",
     2: "40%",
     3: "60%",
@@ -157,13 +157,13 @@ ICON_BUZZER = "mdi:volume-high"
 
 LABEL_DEHUMIDIFIER = ""
 LABEL_CLIMATE = ""
-LABEL_TANK = "水箱滿水"
-LABEL_HUMIDITY = "環境溼度"
-LABEL_DEHUMIDIFIER_BUZZER = "操作提示音"
-LABEL_DEHUMIDIFIER_ON_TIMER = "定時開機"
-LABEL_DEHUMIDIFIER_OFF_TIMER = "定時關機"
-LABEL_DEHUMIDIFIER_FAN_MODE = "風量設定"
-LABEL_DEHUMIDIFIER_FAN_POSITION = "風向設定"
+LABEL_TANK = "Water tank full"
+LABEL_HUMIDITY = "Humidity"
+LABEL_DEHUMIDIFIER_BUZZER = "Buzzer control"
+LABEL_DEHUMIDIFIER_ON_TIMER = "On timer"
+LABEL_DEHUMIDIFIER_OFF_TIMER = "Off timer"
+LABEL_DEHUMIDIFIER_FAN_MODE = "Air volume"
+LABEL_DEHUMIDIFIER_FAN_POSITION = "Louver direction"
 LABEL_CLIMATE_ON_TIMER = "定時開機(分)"
 LABEL_CLIMATE_ON_TIMER = "定時開機"
 LABEL_CLIMATE_OFF_TIMER = "定時關機"
@@ -183,13 +183,13 @@ LABEL_PM25 = "PM2.5"
 LABEL_NANOE = "nanoe"
 LABEL_NANOEX = "nanoeX"
 LABEL_ECONAVI = "ECONAVI"
-LABEL_BUZZER = "操作提示音"
-LABEL_TURBO = "急速"
-LABEL_ENERGY = "本月耗電量"
-LABEL_POWER = "電源"
+LABEL_BUZZER = "Buzzer control"
+LABEL_TURBO = "Turbo"
+LABEL_ENERGY = "Energy"
+LABEL_POWER = "Power"
 
-UNIT_HOUR = "小時"
-UNIT_MINUTE = "分鐘"
+UNIT_HOUR = "hour"
+UNIT_MINUTE = "minute"
 
 STATE_MEASUREMENT = "measurement"
 STATE_TOTAL_INCREASING = "total_increasing"
