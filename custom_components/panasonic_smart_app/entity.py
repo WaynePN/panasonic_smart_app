@@ -7,6 +7,8 @@ from .const import (
     MANUFACTURER,
 )
 
+_LOGGER = logging.getLogger(__package__)
+
 class PanasonicBaseEntity(CoordinatorEntity, ABC):
     def __init__(
         self,
@@ -16,6 +18,7 @@ class PanasonicBaseEntity(CoordinatorEntity, ABC):
         device,
     ):
         super().__init__(coordinator)
+        _LOGGER.info(f"PanasonicBaseEntity: {device}")
         self.client = client
         self.device = device
         self.index = index
