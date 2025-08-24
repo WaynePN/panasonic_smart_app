@@ -81,6 +81,7 @@ class PanasonicDehumidifier(PanasonicBaseEntity, HumidifierEntity):
         raw_mode_list = list(
             filter(lambda c: c["CommandType"] == "0x01", self.commands)
         )[0]["Parameters"]
+        _LOGGER.debug(f"raw_mode_list: {raw_mode_list}")
         target_mode = list(
             filter(lambda m: m[1] == int(status.get("0x01") or 0), raw_mode_list)
         )[0]
